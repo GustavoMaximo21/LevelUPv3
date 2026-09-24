@@ -1,0 +1,178 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* ====== FUNDO ====== */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+body.fundocadastro {
+    background-image: url('../assets/imagens/fundo/fundocadastro.webp');
+}
+body.fundologin {
+    background-image: url('../assets/imagens/fundo/fundologin.webp');
+}
+
+:root {
+    --tamanho-texto: 1rem;
+    --tamanho-botao: 1rem;
+}
+
+/* ====== TESTE BOTAO COLORIDO ====== */
+
+.rgb-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: var(--tamanho-botao);
+    font-weight: bold;
+    cursor: pointer;
+
+    background: red;
+    animation: rgb 2s linear infinite;
+}
+
+@keyframes rgb {
+    0% {
+        background: green;
+    }
+
+    33% {
+        background: blue;
+    }
+    66% {
+        background: red;
+    }
+
+    100% {
+        background: green;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ====== CONTAINER ====== */
+.container {
+    width: 380px;
+    padding: 40px 35px;
+    background: rgba(39, 39, 39, 0.445);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* ====== TÍTULO ====== */
+.container h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ====== INPUTS ====== */
+.input {
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: var(--tamanho-texto);
+    color: #fff;
+}
+
+.input label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #ddd;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* ====== "FORGET" ====== */
+.forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.forget a {
+    color: #361bb1;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+.forget input {
+    accent-color: #361bb1;
+}
+
+/* ====== BOTÃO ====== */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: var(--tamanho-botao);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ffe1ef;
+}
+
+/* ====== CRIAR CONTA ====== */
+.criar-conta {
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.criar-conta a {
+    color: #361bb1;
+    text-decoration: none;
+}
+
+.criar-conta a:hover {
+    text-decoration: underline;
+}

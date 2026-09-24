@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<!-- Informa ao navegador que o documento está utilizando HTML5 -->
+
+<html lang="pt-br">
+<!-- Tag principal do documento HTML.
+     lang="pt-br" define o idioma como português do Brasil,
+     ajudando em acessibilidade e SEO. -->
+
+<head>
+
+  <title>Login</title> 
+  <!-- Define o título exibido na aba do navegador -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Torna a página responsiva.
+       width=device-width ajusta a largura ao tamanho da tela.
+       initial-scale=1.0 define o zoom inicial. -->
+
+  <link rel="shortcut icon" href="../assets/icones/logo.png" type="image/x-icon">
+  <!-- Define o favicon (ícone da aba do navegador).
+       href indica o caminho da imagem. -->
+
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- Importa o arquivo CSS responsável pelo estilo visual da página
+       (cores, layout, fontes, animações etc). -->
+
+</head>
+
+<body class="fundologin">
+<!-- Início do corpo da página (conteúdo visível).
+     A classe "fundologin" permite aplicar estilos específicos via CSS. -->
+
+  <div class="container">
+  <!-- Div que funciona como container principal para centralizar
+       e organizar o formulário na tela. -->
+
+        <form id="formLogin">
+        <!-- Formulário de login.
+             id="formLogin" permite que o JavaScript acesse
+             esse formulário para validação ou envio. -->
+
+            <h2>Login LevelUp </h2>
+            <!-- Título do formulário -->
+
+            <div class="input">
+            <!-- Agrupa o campo de entrada e o rótulo -->
+
+                <input type="text" id="emailLogin" name="email" required/>
+                <!-- Campo para digitar o email.
+                     type="text" aceita texto comum (ideal seria type="email").
+                     id identifica o campo no JS.
+                     name define o nome do dado enviado.
+                     required torna obrigatório. -->
+
+                <label>Digite Seu Email</label>
+                <!-- Texto descritivo do campo -->
+            </div>
+
+            <div class="input">
+                <input type="password" id="senhaLogin" name="senha" required/>
+                <!-- Campo para senha.
+                     type="password" oculta os caracteres digitados.
+                     required impede envio vazio. -->
+
+                <label>Digite Sua Senha</label>
+            </div>
+
+            <div class="forget">
+            <!-- Seção para opções extras como salvar login e recuperar senha -->
+
+                <label for="Salvar Login">
+                <!-- O atributo for deveria corresponder ao id do input -->
+
+                    <input type="checkbox" id="Salvar Login" /> Salvar Login e Senha.
+                    <!-- Checkbox permite marcar opção.
+                         ⚠ Atenção: id com espaço não é recomendado.
+                         O ideal seria: id="salvarLogin" -->
+                </label>
+
+                <a href="#">Esqueceu a senha?</a>
+                <!-- Link para recuperação de senha.
+                     "#" significa que ainda não está direcionando para outra página. -->
+            </div>
+
+            <button class="rgb-button" type="submit">Entrar</button>
+            <!-- Botão que envia o formulário.
+                 type="submit" dispara o evento de envio. -->
+
+            <div class="criar-conta"><br>
+            <!-- ⚠ Classe com espaço cria duas classes:
+                 "criar" e "conta".
+                 Se não for intencional, use:
+                 class="criar-conta" -->
+
+                <p>Não tem uma conta?<a href="cadastro.html">Criar conta</a></p>
+                <p>Continuar sem login: <a href="../index.html">Clique Aqui!</a></p>
+                <!-- Link que redireciona para a página de cadastro -->
+            </div>
+
+        </form>
+    </div>
+
+  <script src="../js/LoginLoja.js"></script>
+  <!-- Importa o arquivo JavaScript externo.
+       Esse script provavelmente contém a lógica de validação,
+       verificação de usuário e controle do login. -->
+
+</body>
+</html>
