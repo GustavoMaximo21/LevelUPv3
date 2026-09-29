@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<!-- Informa ao navegador que o documento está utilizando HTML5.
+     Isso garante que os recursos mais modernos da linguagem sejam reconhecidos corretamente. -->
+
+<html lang="pt-br"> 
+<!-- Tag raiz do documento HTML.
+     O atributo lang="pt-br" define que o idioma da página é português do Brasil.
+     Isso ajuda em acessibilidade e mecanismos de busca. -->
+
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Define a codificação de caracteres como UTF-8.
+         Permite o uso correto de acentos, símbolos e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Torna a página responsiva.
+         width=device-width faz a largura acompanhar o tamanho da tela.
+         initial-scale=1.0 define o zoom inicial. -->
+
+    <title>Cadastro</title> 
+    <!-- Define o título que aparece na aba do navegador. -->
+
+    <link rel="shortcut icon" href="../assets/icones/logo.png" type="image/x-icon">
+    <!-- Define o ícone (favicon) exibido na aba do navegador.
+         O atributo href indica o caminho da imagem. -->
+
+    <link rel="stylesheet" href="../css/login.css"> 
+    <!-- Importa um arquivo CSS externo.
+         Esse arquivo contém as regras de estilo (cores, fontes, layout, etc). -->
+
+    <script type="text/javascript" src="../js/CadastroLoja.js"></script>
+    <!-- Importa um arquivo JavaScript externo.
+         Esse script provavelmente contém a lógica de validação ou envio do formulário. -->
+</head>
+
+<body class="fundocadastro">
+<!-- Início do corpo da página (conteúdo visível).
+     A classe "fundocadastro" permite aplicar estilos específicos via CSS. -->
+
+<!-- Início do formulário principal -->
+<form id="Cadastro" method="post">
+<!-- 
+    id="Cadastro" permite que o formulário seja acessado pelo JavaScript.
+    method="post" define que os dados serão enviados de forma oculta ao servidor.
+-->
+
+    <div class="container">
+        <!-- Div usada como container principal para organizar o layout -->
+
+
+            <h2>Criar Conta LevelUp </h2>
+            <!-- Título do formulário exibido para o usuário -->
+
+            <div class="input">
+                <!-- Div que agrupa o campo de texto e seu rótulo -->
+
+                <input type="text" id="nome1" name="nome" required>
+                <!-- Campo de texto para digitar o nome completo.
+                     type="text" permite entrada de texto.
+                     id="nome1" identifica o campo.
+                     name="nome" define o nome do dado enviado ao servidor.
+                     required torna o preenchimento obrigatório. -->
+
+                <label>Nome Completo</label>
+                <!-- Rótulo que identifica o campo para o usuário -->
+            </div>
+
+            <div class="input">
+                <input type="email" id="email1" name="email" required>
+                <!-- Campo específico para email.
+                     type="email" valida automaticamente o formato do email.
+                     required obriga o preenchimento. -->
+
+                <label>Seu Email</label>
+            </div>
+
+            <div class="input">
+                <input type="password" id="senha1" name="senha" required>
+                <!-- Campo para senha.
+                     type="password" oculta os caracteres digitados.
+                     required impede envio vazio. -->
+
+                <label>Crie uma Senha</label>
+            </div>
+
+            <button class="rgb-button" type="submit">Registrar</button>
+            <!-- Botão que envia o formulário.
+            type="submit" dispara o envio dos dados. -->
+            
+            <div class="criar-conta">
+                 <!-- Div que contém o link para login. -->
+                 
+                 <p>Já possui uma conta? <a href="LoginLoja.html">Entrar</a></p>
+                 <p>Continuar sem login: <a href="../index.html">Clique Aqui!</a></p>
+                <!-- Link que redireciona para a página de login -->
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
